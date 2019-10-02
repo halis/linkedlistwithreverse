@@ -14,6 +14,8 @@ While this would make the code simpler and less prone to mistakes, it would incr
   
 I decided that maintaining constant space was more useful.
 
+Further improvements can be had by refactoring add and remove to work in Θ(1) constant time.
+
 
 ## Example
 
