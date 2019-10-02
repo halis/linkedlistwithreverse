@@ -15,16 +15,18 @@ class LinkedList {
     const newNode = new Node(any)
     if (!this.head) {
       this.head = newNode
-    } else {
-      let curr = this.head
-      while (curr) {
-        if (!curr.next) {
-          break
-        }
-        curr = curr.next
-      }
-      curr.next = newNode
+      return newNode
     }
+
+    let curr = this.head
+    while (curr) {
+      if (!curr.next) {
+        break
+      }
+      curr = curr.next
+    }
+    curr.next = newNode
+    return newNode
   }
 
   remove(any) {
@@ -70,6 +72,17 @@ class LinkedList {
       prev = curr
       curr = next
     }
+    return this.head
+  }
+
+  length() {
+    let curr = this.head
+    let ctr = 0
+    while (curr) {
+      ctr++
+      curr = curr.next
+    }
+    return ctr
   }
 
   print() {
@@ -84,6 +97,8 @@ class LinkedList {
     }
     process.stdout.write(' -> null')
     process.stdout.write('\n')
+
+    return this.head
   }
 }
 
