@@ -6,6 +6,15 @@ All operations, including reverse, have:
 **Time Complexity**: Θ(n) (linear time)  
 **Space Complexity**: Θ(1) (constant space)  
 
+I considered abstracting list traversal into a higher order function.
+This would be a function `const traverse = fn => list => ...`
+This function would iterate through the list and then call the user supplied function at each step.  
+  
+While this would make the code simpler and less prone to mistakes, it would increase the space complexity to Θ(n) as each function call (for each item) would have it's own stack frame.  
+  
+I decided that maintaining constant space was more useful.
+
+
 ## Example
 
 ```js
