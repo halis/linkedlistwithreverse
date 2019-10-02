@@ -9,6 +9,8 @@ All operations, including reverse, have:
 ## Example
 
 ```js
+const { LinkedList } = require('./linkedlist')
+
 try {
   const list = new LinkedList()
 
@@ -17,6 +19,7 @@ try {
   list.add(3)
   list.add(4)
   list.print()
+  console.log('length', list.length())
   // 1 -> 2 -> 3 -> 4 -> null
 
   list.reverse()
@@ -27,6 +30,7 @@ try {
   list.remove(4)
   list.remove(5)
   list.print()
+  console.log('length', list.length())
   // 3 -> 2 -> null
 
   console.log('find 5:', list.find(5))
