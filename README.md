@@ -1,4 +1,4 @@
-# linkedlistwithreverse
+# linked list with reverse
 A simple (singly) linked list with a reverse function.
 
 All operations, including reverse, have:
